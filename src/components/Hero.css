@@ -1,0 +1,157 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: #E8E4DC;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.italic-text {
+  font-style: italic;
+  color: #8B6F47;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-btn {
+  background: #8B6F47;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(139, 111, 71, 0.3);
+  margin-bottom: 3rem;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(139, 111, 71, 0.4);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8B6F47;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #8B6F47;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #E0D5C7;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 1400px) {
+  .hero-image-container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-image-container {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .hero-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 5% 4rem;
+  }
+  
+  .hero-stats {
+    flex-wrap: wrap;
+  }
+  
+  .hero-image-container {
+    max-width: 350px;
+  }
+}
